@@ -119,7 +119,6 @@ export default function MenuEditById() {
   }, [menu, menuEditForm, isSetInitialValues]);
 
   return (
-    <>
       <Layout>
         <Container className="mt-8">
           <h1 className="text-xl">แก้ไขข้อมูลกาแฟ</h1>
@@ -193,6 +192,5 @@ export default function MenuEditById() {
           )}
         </Container>
       </Layout>
-    </>
   );
 }
