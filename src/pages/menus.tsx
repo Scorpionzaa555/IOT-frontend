@@ -1,17 +1,22 @@
 import Layout from "../components/layout";
 import cafeBackgroundImage from "../assets/images/bg-cafe-3.jpg";
+import coffee from "../assets/images/coffee.jpg"
 import useSWR from "swr";
 import { Menu } from "../lib/models";
 import Loading from "../components/loading";
 import { Alert, Button } from "@mantine/core";
 import { IconAlertTriangleFilled, IconPlus } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function MenusPage() {
   const { data: menus, error } = useSWR<Menu[]>("/menus");
+  const navigate = useNavigate();
+  const handleOrder = (menuName: String, menuPrice: Number) => {
+    navigate('/orders/create', { state: { name: menuName, price: menuPrice } });
+  };
 
   return (
-    <>
       <Layout>
         <section
           className="h-[500px] w-full text-white bg-orange-800 bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
@@ -54,7 +59,7 @@ export default function MenusPage() {
             {menus?.map((menu) => (
               <div className="border border-solid border-neutral-200" key={menu.id}>
                 <img
-                  src="https://placehold.co/150x200"
+                  src={coffee}
                   alt={menu.name}
                   className="w-full object-cover aspect-[3/4]"
                 />
@@ -67,12 +72,21 @@ export default function MenusPage() {
                   <Button component={Link} to={`/menus/${menu.id}`} size="xs" variant="default">
                     ดูรายละเอียด
                   </Button>
+
+                  <Button
+                  leftSection={<IconPlus />}
+                  onClick={() => handleOrder(menu.name, menu.price)}
+                  size="xs"
+                  variant="primary"
+                  className="flex items-center space-x-2"
+                >
+                  สั่งกาแฟ
+                </Button>
                 </div>
               </div>
             ))}
           </div>
         </section>
       </Layout>
-    </>
   );
 }

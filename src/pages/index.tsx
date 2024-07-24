@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import cafeBackgroundImage from "../assets/images/bg-cafe-1.jpg";
+import cafeBackgroundImage2 from "../assets/images/bg-cafe-3.jpg";
 import ajPanwitImage from "../assets/images/aj-panwit.jpg";
 import coffeeImage from "../assets/images/coffee-1.jpg";
 import mashleImage from "../assets/images/mashle.webp";
@@ -40,19 +41,25 @@ export default function HomePage() {
           </div>
 
           <p className="text-right mt-8">
-            ปัจจุบันค่าเฟ่ และห้องสมุดของเรา อยู่ในช่วงการดูแลของ .... นายธนาวัลย์ แช่มเสถียร รหัสประจำตัวนักศึกษา 65070099
-            ซึ่งมีบริการ... ขายกาแฟและให้อ่านหนังสือภายในร้านได้ โดยสามารถเข้าไปดูรายการเมนู และหนังสือที่หน้าเว็บได้เลย Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            placeat sit ea sapiente officia sunt cumque impedit, reiciendis quis eius asperiores!
-            Minus, mollitia? Vitae inventore odio quod ducimus similique, expedita sequi, reiciendis
-            rem recusandae impedit voluptatibus quo veritatis ut quis et suscipit? Eligendi, neque!
-            Earum quaerat unde similique totam. Pariatur!
+            ปัจจุบันค่าเฟ่ และห้องสมุดของเรา อยู่ในช่วงการดูแลของ .... <b>นายธนาวัลย์ แช่มเสถียร รหัสประจำตัวนักศึกษา 65070099</b>
+            &nbsp; ซึ่งมีบริการ... ขายกาแฟและให้อ่านหนังสือภายในร้านได้ โดยสามารถเข้าไปดูรายการเมนู และหนังสือที่หน้าเว็บได้เลย
           </p>
         </div>
       </section>
 
-      <section className="w-full flex justify-center">
+      <section
+        className="h-[500px] w-full text-white bg-orange-800 bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
+        style={{
+          backgroundImage: `url(${cafeBackgroundImage2})`,
+        }}
+      >
+        <h1 className="text-5xl mb-2">อิรัชชัยมาเสะ!!!</h1>
+      <h2>65070099 Thanawan Chaemsathian</h2>
+    </section>
+
+      {/* <section className="w-full flex justify-center">
         <img src={coffeeImage} alt="Coffee" className="w-full" />
-      </section>
+      </section> */}
     </Layout>
   );
 }
