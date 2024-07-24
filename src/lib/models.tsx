@@ -5,3 +5,12 @@ export interface Book {
   year: number;
   is_published: boolean;
 }
+
+export interface Menu {
+  id: number;
+  name: string;
+  quantity: number;
+  note: string;
+  price: number;
+  detail: string;
+}
