@@ -72,7 +72,7 @@ export default function MenusPage() {
                   <Button component={Link} to={`/menus/${menu.id}`} size="xs" variant="default">
                     ดูรายละเอียด
                   </Button>
-
+                  &nbsp;
                   <Button
                   leftSection={<IconPlus />}
                   onClick={() => handleOrder(menu.name, menu.price)}

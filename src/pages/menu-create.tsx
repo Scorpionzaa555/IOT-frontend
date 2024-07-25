@@ -18,10 +18,13 @@ export default function MenuCreatePage() {
       quantity: 1,
       note: "",
       price: 0,
+      detail: "",
     },
 
     validate: {
       name: isNotEmpty("กรุณาระบุชื่อเมนู"),
+      detail: isNotEmpty("กรุณาระบุไซส์ควย"),
+      price: isNotEmpty("กรุณาระบุราคา"),
     },
   });
 
@@ -36,6 +39,7 @@ export default function MenuCreatePage() {
       });
       navigate(`/menus/${response.data.id}`);
     } catch (error) {
+      notifications.show({title: "หีใหญ่", message: "Muahahaha"});
       if (error instanceof AxiosError) {
         if (error.response?.status === 422) {
           notifications.show({
