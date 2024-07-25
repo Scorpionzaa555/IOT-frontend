@@ -155,6 +155,24 @@ export default function BookEditById() {
                   {...bookEditForm.getInputProps("author")}
                 />
 
+                <TextInput
+                  label="รายละเอียด"
+                  placeholder="รายละเอียด"
+                  {...bookEditForm.getInputProps("detail")}
+                />
+
+                <TextInput
+                  label="เรื่องย่อ"
+                  placeholder="เรื่องย่อ"
+                  {...bookEditForm.getInputProps("short")}
+                />
+
+                <TextInput
+                  label="ประเภท"
+                  placeholder="ประเภท"
+                  {...bookEditForm.getInputProps("genre")}
+                />
+
                 <NumberInput
                   label="ปีที่พิมพ์"
                   placeholder="ปีที่พิมพ์"

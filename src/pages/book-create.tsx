@@ -83,6 +83,24 @@ export default function BookCreatePage() {
               {...bookCreateForm.getInputProps("author")}
             />
 
+            <TextInput
+              label="รายละเอียด"
+              placeholder="รายละเอียด"
+              {...bookCreateForm.getInputProps("detail")}
+            />
+
+            <TextInput
+              label="เรื่องย่อ"
+              placeholder="เรื่องย่อ"
+              {...bookCreateForm.getInputProps("short")}
+            />
+
+            <TextInput
+              label="ประเภท"
+              placeholder="ประเภท"
+              {...bookCreateForm.getInputProps("genre")}
+            />
+
             <NumberInput
               label="ปีที่พิมพ์"
               placeholder="ปีที่พิมพ์"

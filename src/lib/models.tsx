@@ -2,6 +2,9 @@ export interface Book {
   id: number;
   title: string;
   author: string;
+  detail: string;
+  short: string;
+  genre: string;
   year: number;
   is_published: boolean;
 }

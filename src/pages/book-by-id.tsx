@@ -46,6 +46,7 @@ export default function BookByIdPage() {
                     accusamus iusto sint amet optio laudantium eius, facilis iure ipsa assumenda
                     alias pariatur! Quis ad ratione amet fugiat, et culpa cupiditate, veritatis
                     beatae sed voluptatum a reprehenderit id odit quas? Enim, earum?
+                    {book.detail}
                   </p>
 
                   <h3>เรื่องย่อ</h3>
@@ -53,6 +54,7 @@ export default function BookByIdPage() {
                     {/* TODO: เพิ่มเรื่องย่อ */}
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia officiis amet nemo
                     ut placeat aliquam neque id voluptates quod nihil.
+                    {book.short}
                   </p>
 
                   <h3>หมวดหมู่</h3>
@@ -62,6 +64,7 @@ export default function BookByIdPage() {
                     <Badge color="teal">#หมวดหมู่ 2</Badge>
                     <Badge color="teal">#หมวดหมู่ 3</Badge>
                     <Badge color="teal">#หมวดหมู่ 4</Badge>
+                    <Badge color="teal">{book.genre}</Badge>
                   </div>
                 </div>
               </div>
