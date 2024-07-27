@@ -16,6 +16,9 @@ export default function BookCreatePage() {
     initialValues: {
       title: "",
       author: "",
+      short: "",
+      genre: "",
+      detail: "",
       year: 2024,
       is_published: false,
     },
@@ -24,6 +27,9 @@ export default function BookCreatePage() {
       title: isNotEmpty("กรุณาระบุชื่อหนังสือ"),
       author: isNotEmpty("กรุณาระบุชื่อผู้แต่ง"),
       year: isNotEmpty("กรุณาระบุปีที่พิมพ์หนังสือ"),
+      short: isNotEmpty("กรุณาใส่เรื่องย่อ"),
+      detail: isNotEmpty("กรุณาระบุรายละเอียดของหนังสือ"),
+      genre: isNotEmpty("กรุณาระบุหมวดหมู่ของเรื่อง")
     },
   });
 
