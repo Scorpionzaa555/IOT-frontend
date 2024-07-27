@@ -20,6 +20,10 @@ import MenuCreatePage from "./pages/menu-create";
 import MenuByIdPage from "./pages/menu-by-id";
 import MenuEditById from "./pages/menu-edit-by-id";
 
+import OrdersPage from "./pages/orders";
+import OrderCreatePage from "./pages/order-by-id";
+import OrderByIdPage from "./pages/order-by-id";
+
 const theme = createTheme({
   primaryColor: "orange",
   fontFamily: '"Noto Sans Thai Looped", sans-serif',
@@ -61,6 +65,18 @@ const router = createBrowserRouter([
   {
     path: "/menus/:menuId/edit",
     element: <MenuEditById />,
+  },
+  {
+    path: "/orders",
+    element: <OrdersPage />,
+  },
+  {
+    path: "/orders/create",
+    element: <OrderCreatePage />,
+  },
+  {
+    path: "/orders/:orderId",
+    element: <OrderByIdPage />,
   },
 ]);
 

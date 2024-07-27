@@ -66,6 +66,7 @@ export default function MenusPage() {
                 <div className="p-4">
                   <h2 className="text-lg font-semibold line-clamp-2">{menu.name}</h2>
                   <p className="text-xs text-neutral-500">โดย {menu.detail}</p>
+                  <p className="text-s text-neutral-500"><b>ราคา {menu.price} บาท</b></p>
                 </div>
 
                 <div className="flex justify-end px-4 pb-2">
