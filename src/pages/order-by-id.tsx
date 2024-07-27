@@ -60,7 +60,6 @@ export default function OrderByIdPage() {
     <>
       <Layout>
         <Container className="mt-4">
-          {/* ใช้ isLoading แทน !order */}
           {isLoading && !error && <Loading />}
           {error && (
             <Alert

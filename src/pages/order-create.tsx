@@ -29,9 +29,8 @@ export default function OrderCreatePage() {
 
   useEffect(() => {
     // คำนวณราคา
-    const Sum = orderCreateForm.values.quantity * price;
-    setTotalPrice(Sum);
-  }, [orderCreateForm.values.quantity, price, orderCreateForm]);
+    setTotalPrice(orderCreateForm.values.quantity * price);
+  }, [orderCreateForm.values.quantity, price]);
 
   const handleSubmit = async (values: typeof orderCreateForm.values) => {
     try {
