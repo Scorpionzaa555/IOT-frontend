@@ -38,7 +38,7 @@ export default function OrderCreatePage() {
       setIsProcessing(true);
       const response = await axios.post<Order>(`/orders`, values);
       notifications.show({
-        title: "สั่งเมนูสำเร็จ",
+        title: "สั่งกาแฟสำเร็จ",
         message: "สั่งเรียบร้อยแล้วกรุณารอสักครู่",
         color: "teal",
       });
@@ -74,7 +74,7 @@ export default function OrderCreatePage() {
     <>
       <Layout>
         <Container className="mt-8">
-          <h1 className="text-xl">สั่งเมนู</h1>
+          <h1 className="text-xl">สั่งกาแฟ</h1>
           <br />
           <form onSubmit={orderCreateForm.onSubmit(handleSubmit)} className="space-y-8">
             <TextInput
