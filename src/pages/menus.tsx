@@ -75,7 +75,9 @@ export default function MenusPage() {
                   </Button>
                   &nbsp;
                   <Button
+                  component={Link}
                   leftSection={<IconPlus />}
+                  to="/orders/create"
                   onClick={() => handleOrder(menu.name, menu.price)}
                   size="xs"
                   variant="primary"
