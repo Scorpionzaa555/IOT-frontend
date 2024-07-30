@@ -20,7 +20,10 @@ export default function BooksPage() {
             backgroundImage: `url(${cafeBackgroundImage})`,
           }}
         >
-          <h1 className="text-5xl mb-2">หนังสือโว้ยยย</h1>
+          <div className="typewriter">
+            <h1 className="text-5xl mb-2">หนังสือโว้ยยย</h1>
+          </div>
+          
           <h2>รายการหนังสือทั้งหมด</h2>
         </section>
 

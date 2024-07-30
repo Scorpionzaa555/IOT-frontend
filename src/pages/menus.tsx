@@ -24,7 +24,10 @@ export default function MenusPage() {
             backgroundImage: `url(${cafeBackgroundImage})`,
           }}
         >
-          <h1 className="text-5xl mb-2">กาแฟโว้ยยย</h1>
+          <div className="typewriter">
+            <h1 className="text-5xl mb-2">กาแฟโว้ยยย</h1>
+          </div>
+          
           <h2>รายการกาแฟทั้งหมด</h2>
         </section>
 

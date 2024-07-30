@@ -13,7 +13,10 @@ export default function HomePage() {
           backgroundImage: `url(${cafeBackgroundImage})`,
         }}
       >
-        <h1 className="text-5xl mb-2">ยินดีต้อนรับสู่ IoT Library & Cafe</h1>
+        <div className="typewriter">
+          <h1 className="text-5xl mb-2">Welcome to IoT Library & Cafe</h1>
+        </div>
+        &nbsp;
         <h2>ร้านกาแฟที่มีหนังสืออยู่นิดหน่อยให้คุณได้อ่าน</h2>
       </section>
 
